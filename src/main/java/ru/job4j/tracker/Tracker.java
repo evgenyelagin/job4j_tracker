@@ -5,18 +5,18 @@ public class Tracker {
     private int ids = 1;
     private int size = 0;
 
-    public Item add(Item item) {
-        item.setId(ids++);
-        items[size++] = item;
-        return item;
+    public Item add(Item point) {
+        point.setId(ids++);
+        items[size++] = point;
+        return point;
     }
 
     public Item findById(int id) {
         Item rsl = null;
         for (int index = 0; index < size; index++) {
-            Item item = items[index];
-            if (item.getId() == id) {
-                rsl = item;
+            Item element = items[index];
+            if (element.getId() == id) {
+                rsl = element;
                 break;
             }
         }
